@@ -1,19 +1,22 @@
+#imports and set-up completed by Jacob Mathews
 import face_recognition
 import os
 import cv2
 
+#Finding proper functions and syntax for variables was completed by Josh Sodolak and Caleb Pudden
 KNOWN_FACES_DIR = "known_faces"
 UNKNOWN_FACES_DIR = "unknown_faces"
 TOLERANCE = .8
 FRAME_THICKNESS = 3
 FONT_THICKNESS = 2
-MODEL = "hog"
+MODEL = "cnn"
 
-print("loading known faces") #added this comment
+print("loading known faces")
 
 known_faces = []
 known_names = []
 
+#fetching queue of known facial expressions completed by Charlie Pham
 for name in os.listdir(KNOWN_FACES_DIR):
     for filename in os.listdir(f"{KNOWN_FACES_DIR}/{name}"):
         image = face_recognition.load_image_file(f"{KNOWN_FACES_DIR}/{name}/{filename}")
@@ -22,6 +25,8 @@ for name in os.listdir(KNOWN_FACES_DIR):
         known_names.append(name)
 
 print("processing unknown faces")
+
+#Fetching unknown faces, comparison, and display was completed by Jacob Mathews and Maxim Tybar
 for filename in os.listdir(UNKNOWN_FACES_DIR):
     print(filename)
     image = face_recognition.load_image_file(f"{UNKNOWN_FACES_DIR}/{filename}")
@@ -51,3 +56,5 @@ for filename in os.listdir(UNKNOWN_FACES_DIR):
 
 
 
+# Youtube tutorial was followed to establish face_recognition import
+#Link: https://www.youtube.com/watch?v=535acCxjHCI
