@@ -4,10 +4,10 @@ import cv2
 
 KNOWN_FACES_DIR = "known_faces"
 UNKNOWN_FACES_DIR = "unknown_faces"
-TOLERANCE = .5
+TOLERANCE = .8
 FRAME_THICKNESS = 3
 FONT_THICKNESS = 2
-MODEL = "cnn"
+MODEL = "hog"
 
 print("loading known faces")
 
@@ -46,8 +46,8 @@ for filename in os.listdir(UNKNOWN_FACES_DIR):
             cv2.putText(image, match, (face_location[3]+10, face_location[2]+15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (200,200,200), FONT_THICKNESS)
 
     cv2.imshow(filename, image)
-    cv2.waitKey(5000)
-    #cv2.destroyWindow(filename)
+    cv2.waitKey(4000)
+    cv2.destroyWindow(filename)
 
 
 
