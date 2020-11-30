@@ -8,7 +8,7 @@ def analyzeDatFace():
     #Finding proper functions and syntax for variables was completed by Josh Sodolak and Caleb Pudden
     KNOWN_FACES_DIR = "known_faces"
     UNKNOWN_FACES_DIR = "unknown_faces"
-    TOLERANCE = .8
+    TOLERANCE = .6
     FRAME_THICKNESS = 3
     FONT_THICKNESS = 2
     MODEL = "cnn"
