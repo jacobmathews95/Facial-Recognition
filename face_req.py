@@ -2,6 +2,25 @@
 import face_recognition
 import os
 import cv2
+from tkinter import *
+
+
+app = Tk()
+app.title("Emotional Recognition")
+app.geometry("800x600")
+app.configure(background = 'grey')
+
+
+
+uploadButton = Button(app, text = 'Upload photo', bd = '5', command = app.destroy)
+uploadButton.place(x=50, y=555)
+
+newPictureButton = Button(app, text = 'Take new photo', bd = '5', command = app.destroy)
+newPictureButton.place(x=635, y=555)
+
+app.mainloop()
+
+
 
 #Finding proper functions and syntax for variables was completed by Josh Sodolak and Caleb Pudden
 KNOWN_FACES_DIR = "known_faces"
