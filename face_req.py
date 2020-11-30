@@ -57,7 +57,7 @@ def analyzeDatFace():
         cv2.destroyWindow(filename)
 
 app = Tk()
-app.title("Emotional Recognition")
+app.title("Facial Recognition")
 app.geometry("800x600")
 app.configure(background = 'grey')
 
